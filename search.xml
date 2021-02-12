@@ -4,26 +4,27 @@
   
     
     <entry>
-      <title>Timeline</title>
-      <link href="2021/02/12/Timeline/"/>
-      <url>2021/02/12/Timeline/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Unity 原生插件</title>
       <link href="2021/02/12/Unity-%E5%8E%9F%E7%94%9F%E6%8F%92%E4%BB%B6/"/>
       <url>2021/02/12/Unity-%E5%8E%9F%E7%94%9F%E6%8F%92%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="meta-namereferrer-contentno-referrer"><a class="markdownIt-Anchor" href="#meta-namereferrer-contentno-referrer"></a> <meta name="referrer" content="no-referrer" /></h2><h2 id="plugin-inspector"><a class="markdownIt-Anchor" href="#plugin-inspector"></a> Plugin Inspector</h2><p>使用 Plugin Inspector 可指定 Unity 加载和引用插件文件时依据的条件。还可以为插件指定其他平台特定的各种设置。</p><p>在 Project 窗口中选择插件一个文件来查看 Plugin Inspector：</p><p><a href="https://docs.unity.cn/cn/current/Manual/PluginInspector.html"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog/cj/cj1.png" alt="" /></a>)</p><p>General<br />Auto Reference 设置用于控制项目中其他程序集和程序集定义引用插件文件的方式。</p><p>如果选中 Auto Reference（默认设置），则所有预定义程序集和程序集定义自动引用插件文件。如果要显式声明对插件的引用，请取消选中 Auto Reference。</p><p>使用 Assembly Definition Inspector 窗口可以声明对程序集定义的插件文件的引用。请参阅脚本编译和程序集定义文件以了解更多信息。</p><p>重要信息：取消选中 Auto Reference 时，不能从 Unity 为项目创建的预定义程序集引用插件。这些预定义程序集包含项目中尚未使用程序集定义文件分配给其他程序集的所有脚本。如果一个插件已取消选中 Auto Reference 属性，只有使用程序集定义文件创建的程序集中包含的代码才能引用该插件中的类、函数或其他资源。</p><p>若要限制可引用插件（通过显式声明对该插件的所有引用）的范围，请将 Auto Reference 设置为 false。例如，如果项目中只有一组脚本使用插件，那么可以为这些脚本创建一个程序集定义文件，并创建对该插件的显式引用。因为在整个项目中不再自动引用该插件，所以项目中的其他脚本不会误用该插件。（多个程序集可以使用该插件，但是所有程序集必须显式声明此依赖关系。）另外，如果更改插件，则只需重新编译相关程序集，而不必重新编译整个项目。</p><p>还可以使用对插件的显式引用，防止资源包中使用的插件与导入了此包的项目中的其他代码发生冲突。</p><p>Select platforms for plugin<br />使用 Select platforms for plugin 设置可以定义一些与插件文件兼容并要使用该插件文件的平台。平台列表包括 Editor 本身（适用于播放模式以及编辑时运行的任何脚本）、Standalone 以及安装了 Unity 构建支持包的平台（例如 Android、iOS 和 WebGL）。</p><p>可以选中 Any Platform 并（可选）排除个别平台。或者也可以取消选中 Any Platform 并（可选）包含个别平台。</p><p>Platform settings<br />选择平台后，可从下面单独的 Platform Settings 部分中指定其他选项，例如 CPU 类型和特定操作系统。Inspector 窗口的此区域包含每个选定平台的选项卡。一些平台没有设置，或只有少数设置（例如 CPU 和操作系统选择）。</p><p>如有可能，Inspector 仅显示适用于特定平台上的插件类型的设置。例如，对于带有 .dll 扩展名的原生插件文件，Inspector 只显示适用于 Windows 的选项，因为此类插件只能用于 Windows。</p><p>注意：无法卸载原生插件。如果 Editor 已经加载一个插件，那么即使在同一 Editor 会话中更改了该插件的设置，该插件仍会保持加载。必须重新启动 Unity 才能卸载该插件。</p><p>Editor 设置<br />使用 Editor 平台设置可以指定插件兼容的 CPU 架构和操作系统。</p><p><a href="https://docs.unity.cn/cn/current/Manual/PluginInspector.html"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog//cj/cj2.png" alt="" /></a>)</p><p>大多数托管插件与任何 CPU 和操作系统都兼容，但是原生插件通常只与单个操作系统兼容，并且根据其编译方式，可能只与单个 CPU 架构兼容。</p><p>例如，如果选择 CPU X86，Unity 会在运行旧版本的 32 位 Editor 时加载插件，但是在运行 64 位版时不加载插件。</p><p>同样，如果选择 OS Windows，Unity 会在 Windows 系统上运行 Editor 时加载插件，但在 OS X 或 Linux 系统上运行时不加载插件。</p><p>独立平台设置<br />对于独立平台（Windows、OS X、Linux），可以选择与库兼容的 CPU 架构。对于托管库，除非访问特定的系统 API，否则它们通常与任何操作系统和架构都兼容。原生库仅与单个操作系统兼容，但可能与 32 位和/或 64 位 CPU 架构兼容。</p><p>另请参阅：独立平台的 Player 设置。</p><p>通用 Windows 平台<br />通用 Windows 平台插件设置将在相应的部分中具体介绍。请参阅：</p><p>通用 Windows 平台：.NET 脚本后端上的插件</p><p>通用 Windows 平台：IL2CPP 脚本后端上的插件</p><p>Android<br />对于可能与 Android 兼容的插件文件，可以选择 CPU 架构。所选的架构必须与编译库时针对的架构匹配。Unity 不会验证是否已选择正确的设置。</p><p>iOS 和 tvOS<br />iOS 和 tvOS 设置可用于指定插件所依赖的 iOS 框架（如有）。</p><p><a href="https://docs.unity.cn/cn/current/Manual/PluginInspector.html"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog//cj/cj3.png" alt="" /></a></p><p>对于动态加载的库，以及包含动态加载的库或运行时需要加载的任何资产和资源的捆绑包和框架，请选中 Add to Embedded Binaries 选项。选中此选项后，Unity 将设置 Xcode 项目选项，从而将插件文件复制到最终应用程序包。</p><p>对于必须编译到构建中的插件源代码文件，可以在 Compile Flags 字段中指定编译时需要的任何标志。</p><h2 id="define-constraints"><a class="markdownIt-Anchor" href="#define-constraints"></a> Define Constraints</h2><p>使用 Define Constraints 设置可以指定一些符号，必须定义（或取消定义）这些符号才能使用插件文件。</p><p>Unity 仅在已满足所有 Define Constraints 时才加载和引用插件。约束的作用与 C# 中的 #if 预处理器指令类似，但在程序集级别（而不是脚本级别）运行。必须定义 Define Constraints 设置中的所有符号，才能满足这些约束。还可以用否定 !（叹号）符号作为符号的前缀，指定必须取消定义该符号。例如，如果在 Define Constraints 中指定以下符号：</p><p><a href="https://docs.unity.cn/cn/current/Manual/PluginInspector.html"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog//cj/cj4.png" alt="" /></a></p><p>当未定义符号 ENABLE_IL2CPP 且已定义符号 UNITY_2018_3_OR_NEWER 时，满足这些约束。或者换言之，仅在 Unity 2018.3 或更高版本的非 IL2CPP 脚本运行时中才加载和引用此程序集。</p><p>可以使用 Unity 的任何内置定义符号或者项目的 Scripting Define Symbols Player 设置中定义的任何符号。请参阅平台相关的编译以了解更多信息（包括内置符号的列表）。请注意，<strong>Scripting Define Symbols</strong> 设置与具体平台相关。确保在所有相关平台上都定义了必要的符号。</p><p>插件检测<br />Unity 通过文件扩展名来检测 Assets 文件夹中的文件是否为插件。具有以下扩展名的文件将视为插件：</p><ul><li>.dll</li><li>.winmd</li><li>.so</li><li>.jar</li><li>.aar</li><li>.xex</li><li>.def</li><li>.suprx</li><li>.prx</li><li>.sprx</li><li>.rpl</li><li>.cpp</li><li>.cc</li><li>.c</li><li>.h</li><li>.jslib</li><li>.jspre</li><li>.bc</li><li>.a</li><li>.m</li><li>.mm</li><li>.swift</li><li>.xib</li></ul><p>Unity 还将某些文件夹视为捆绑插件。Unity 并不在此类文件夹中寻找其他插件文件，所以文件夹中的所有内容被视为单个插件。在文件夹包含以下扩展名之一时，Unity 会检测该文件夹是否为捆绑插件：</p><ul><li>.framework</li><li>.bundle</li><li>.plugin</li><li></li></ul><p>最后，Unity 将父级路径与 Assets/Plugins/Android/ 完全匹配的文件夹视为 Android 库插件文件夹。Unity 对此类文件夹的处理方式与包含特殊扩展名 .plugin、.bundle 和 .framework 的文件夹相同。</p><p>默认设置<br />Unity 根据插件所在的文件夹，设置插件文件的导入设置的默认值：<br /><a href="https://docs.unity.cn/cn/current/Manual/PluginInspector.html"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog//cj/cj5.png" alt="" /></a></p><p>2018–11–26</p><p>删除了三星电视支持。</p><p>在 2018.3 版中添加了用于插件的 Auto Reference 和 Define Constraints 设置</p>]]></content>
       
       
+      <categories>
+          
+          <category> 编程 </category>
+          
+          <category> 理论知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> unity </tag>
+            
+        </tags>
       
     </entry>
     
