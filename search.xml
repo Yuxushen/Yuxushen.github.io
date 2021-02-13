@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>untiy 常用提醒</title>
+      <link href="2021/02/13/Untiy-%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/"/>
+      <url>2021/02/13/Untiy-%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><meta name="referrer" content="no-referrer" /><h2 id="unity-常用特性"><a class="markdownIt-Anchor" href="#unity-常用特性"></a> Unity 常用特性</h2><p><a href="https://www.daly.top/%E6%88%91%E7%9A%84%E5%8E%86%E7%A8%8B%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/" title="Unity 官网特性">Unity 官网特性</a>查看。</p><p><a href="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog/tx1.gif"><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/Yuxushen/CDN/blog/tx1.gif" alt="" /></a></p><ul><li><p>重命名不丢失数据<br />[FormerlySerializedAs(“对象名”)]</p></li><li><p>在编辑模式下执行代码<br />[ExecuteInEditorMode]</p></li><li><p>防止将相同类型（或子类型）的 MonoBehaviour 多次添加到 GameObject。<br />[DisallowMultipleComponent]</p></li><li><p>程序集级别的属性。具有该属性的程序集中的任何类都将被视为编辑器类。<br />[AssemblyIsEditorAssembly]</p></li><li><p>使脚本的实例总是执行，无论是作为播放模式的一部分还是编辑时。<br />[ExecuteAlways]</p></li><li><p>标记方法已过时<br />[system.obsolete(“注释”)]</p></li><li><p>把公有字段的隐藏<br />[HideInInspector]</p></li><li><p>第一次点击到父物体上（挂载到类上）<br />[SelectionBase]</p></li><li><p>属性捆绑<br />[RequireComponent(typeof(绑定的组件类型)]</p></li><li><p>创建菜单属性<br />[MenuItem(“菜单名/属性名”)]</p></li><li><p>创建菜单子节点<br />[AddComponentMenu(path)]</p></li><li><p>访问网站<br />[HelpURL(“<a href="Https://xxxx.com">Https://xxxx.com</a>”)]</p></li><li><p>[Tooltip] 提示</p></li><li><p>[Heade]  加粗</p></li><li><p>[Range(minnum,maxNum)] 取值范围</p></li><li><p>[TextArea] 文本框扩大</p></li><li><p>[Multiline] 文本框扩大</p></li><li><p>[ContextMenu] 调用脚本</p></li><li><p>[callNull] 判断不为空</p></li><li><p>[Toggle(“value”)] 序列化为bool值</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> unity </category>
+          
+          <category> 理论知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Unity 原生插件</title>
       <link href="2021/02/12/Unity-%E5%8E%9F%E7%94%9F%E6%8F%92%E4%BB%B6/"/>
       <url>2021/02/12/Unity-%E5%8E%9F%E7%94%9F%E6%8F%92%E4%BB%B6/</url>
